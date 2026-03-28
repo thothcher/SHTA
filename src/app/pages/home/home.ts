@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy, inject, signal, OnDestroy, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, signal, OnDestroy, CUSTOM_ELEMENTS_SCHEMA, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { LanguageService } from '../../services/language.service';
@@ -79,7 +80,7 @@ import { LanguageService } from '../../services/language.service';
               <p>{{ t.t('home.chapterRoadmapDesc') }}</p>
             </div>
           </a>
-          <a routerLink="/quiz/1" class="feature-card">
+          <a routerLink="/chapters" class="feature-card">
             <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=240&fit=crop&auto=format" alt="" class="feature-img" loading="lazy">
             <div class="feature-body">
               <span class="feature-tag">{{ t.t('home.practice') }}</span>
@@ -849,8 +850,9 @@ import { LanguageService } from '../../services/language.service';
 export class HomePage implements OnDestroy {
   protected readonly t = inject(LanguageService);
   private readonly http = inject(HttpClient);
+  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
-  protected readonly surveyVoted = signal(!!localStorage.getItem('shta_survey_vote'));
+  protected readonly surveyVoted = signal(this.isBrowser && !!localStorage.getItem('shta_survey_vote'));
   protected readonly surveyText = signal('');
 
   vote(text: string) {

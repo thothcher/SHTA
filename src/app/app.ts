@@ -1,4 +1,5 @@
-import { Component, signal, inject, ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA, effect, DOCUMENT } from '@angular/core';
+import { Component, signal, inject, ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA, effect, DOCUMENT, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import { LanguageService } from './services/language.service';
@@ -21,6 +22,7 @@ export class App {
   protected readonly themeService = inject(ThemeService);
   protected readonly mobileMenuOpen = signal(false);
   private readonly doc = inject(DOCUMENT);
+  private readonly destroyRef = inject(DestroyRef);
 
   constructor() {
     // Set <html lang> to Georgian
@@ -29,14 +31,15 @@ export class App {
     // Load gamification stats when user is logged in
     effect(() => {
       if (this.auth.isLoggedIn() && !this.auth.isAdmin()) {
-        this.gam.loadStats().subscribe();
+        this.gam.loadStats().pipe(takeUntilDestroyed(this.destroyRef)).subscribe();
       }
     });
 
     // Auto-dismiss XP toast after 3.5s
-    effect(() => {
+    effect((onCleanup) => {
       if (this.gam.pendingToast()) {
-        setTimeout(() => this.gam.dismissToast(), 3500);
+        const id = setTimeout(() => this.gam.dismissToast(), 3500);
+        onCleanup(() => clearTimeout(id));
       }
     });
   }

@@ -1,6 +1,10 @@
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'psylearn_secret_key_2026_zimbardo';
+if (!process.env.JWT_SECRET) {
+  console.warn('[WARN] JWT_SECRET not set — using random secret (tokens will not persist across restarts)');
+}
+const JWT_SECRET = process.env.JWT_SECRET || crypto.randomBytes(32).toString('hex');
 
 /** Extract book_id from X-Book-Id header, default to 'psy' */
 function extractBookId(req) {

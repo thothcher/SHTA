@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy, inject, OnInit, signal, computed, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, OnInit, signal, computed, CUSTOM_ELEMENTS_SCHEMA, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FlashcardService, Flashcard } from '../../services/flashcard.service';
 import { GamificationService } from '../../services/gamification.service';
@@ -385,6 +386,7 @@ export class FlashcardsPage implements OnInit {
   private readonly flashcardService = inject(FlashcardService);
   private readonly gam = inject(GamificationService);
   private readonly route = inject(ActivatedRoute);
+  private readonly destroyRef = inject(DestroyRef);
 
   readonly chapters = CHAPTERS;
   readonly chapterId = signal<number | null>(null);
@@ -403,7 +405,7 @@ export class FlashcardsPage implements OnInit {
   readonly hardCnt = computed(() => [...this.ratings().values()].filter(r => r === 'hard').length);
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
+    this.route.params.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(params => {
       if (params['chapterId']) {
         const id = Number(params['chapterId']);
         this.chapterId.set(id);

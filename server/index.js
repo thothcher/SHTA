@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const rateLimit = require('express-rate-limit');
 const { initDatabase } = require('./database');
 const authRoutes = require('./routes/auth');
 const notesRoutes = require('./routes/notes');
@@ -32,14 +33,18 @@ const PORT = process.env.PORT || 3000;
     next();
   });
 
+  // Rate limiters
+  const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 20, message: { error: 'Too many attempts, please try again later.' } });
+  const contactLimiter = rateLimit({ windowMs: 60 * 60 * 1000, max: 5, message: { error: 'Too many messages, please try again later.' } });
+
   // Routes
-  app.use('/api/auth', authRoutes);
+  app.use('/api/auth', authLimiter, authRoutes);
   app.use('/api/notes', notesRoutes);
   app.use('/api/progress', progressRoutes);
   app.use('/api/admin', adminRoutes);
   app.use('/api/quiz', quizRoutes);
   app.use('/api/game', gameRoutes);
-  app.use('/api/contact', contactRoutes);
+  app.use('/api/contact', contactLimiter, contactRoutes);
   app.use('/api/gamification', gamificationRoutes);
   app.use('/api/flashcards', flashcardRoutes);
 

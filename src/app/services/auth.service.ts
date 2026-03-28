@@ -1,7 +1,7 @@
 import { Injectable, signal, computed, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { tap, catchError, throwError } from 'rxjs';
+import { tap } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 export interface User {
@@ -56,15 +56,13 @@ export class AuthService {
     return this.http.post<AuthResponse>(`${API_URL}/register`, {
       email, username, password, displayName
     }).pipe(
-      tap(res => this.handleAuth(res)),
-      catchError(err => throwError(() => err))
+      tap(res => this.handleAuth(res))
     );
   }
 
   login(login: string, password: string) {
     return this.http.post<AuthResponse>(`${API_URL}/login`, { login, password }).pipe(
-      tap(res => this.handleAuth(res)),
-      catchError(err => throwError(() => err))
+      tap(res => this.handleAuth(res))
     );
   }
 
@@ -74,26 +72,19 @@ export class AuthService {
         this.currentUser.set(res.user);
         localStorage.setItem('psy_user', JSON.stringify(res.user));
       }),
-      catchError(err => throwError(() => err))
     );
   }
 
   resendVerification() {
-    return this.http.post<{ message: string }>(`${API_URL}/resend-verification`, {}).pipe(
-      catchError(err => throwError(() => err))
-    );
+    return this.http.post<{ message: string }>(`${API_URL}/resend-verification`, {});
   }
 
   forgotPassword(email: string) {
-    return this.http.post<{ message: string }>(`${API_URL}/forgot-password`, { email }).pipe(
-      catchError(err => throwError(() => err))
-    );
+    return this.http.post<{ message: string }>(`${API_URL}/forgot-password`, { email });
   }
 
   resetPassword(email: string, code: string, newPassword: string) {
-    return this.http.post<{ message: string }>(`${API_URL}/reset-password`, { email, code, newPassword }).pipe(
-      catchError(err => throwError(() => err))
-    );
+    return this.http.post<{ message: string }>(`${API_URL}/reset-password`, { email, code, newPassword });
   }
 
   logout() {

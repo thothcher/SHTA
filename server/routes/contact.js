@@ -1,5 +1,6 @@
 const express = require('express');
 const { sendContactNotification } = require('../mailer');
+const { authenticate, requireAdmin } = require('../middleware');
 const router = express.Router();
 
 // POST /api/contact
@@ -29,8 +30,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// GET /api/contact
-router.get('/', async (req, res) => {
+// GET /api/contact (admin only)
+router.get('/', authenticate, requireAdmin, async (req, res) => {
   try {
     const result = await req.db.execute('SELECT * FROM contact_messages ORDER BY created_at DESC');
     res.json(result.rows);

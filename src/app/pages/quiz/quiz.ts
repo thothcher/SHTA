@@ -39,8 +39,8 @@ import { LanguageService } from '../../services/language.service';
                 <button
                   class="option-btn"
                   [class.selected]="selectedIndex() === $index"
-                  [class.correct]="answered() && $index === currentQuestion()?.correctIndex"
-                  [class.wrong]="answered() && selectedIndex() === $index && $index !== currentQuestion()?.correctIndex"
+                  [class.correct]="answered() && $index === currentQuestion()!.correctIndex"
+                  [class.wrong]="answered() && selectedIndex() === $index && $index !== currentQuestion()!.correctIndex"
                   [disabled]="answered()"
                   (click)="selectAnswer($index)">
                   <span class="option-letter">{{ ['A', 'B', 'C', 'D'][$index] }}</span>

@@ -129,7 +129,7 @@ import { LanguageService } from '../../services/language.service';
       color: var(--color-text);
     }
     .admin-table tr:hover td {
-      background: rgba(0,0,0,0.02);
+      background: rgba(255,255,255,0.03);
     }
 
     .action-btns {
@@ -144,12 +144,12 @@ import { LanguageService } from '../../services/language.service';
       cursor: pointer;
       font-weight: 600;
     }
-    .btn-success { background: #d4edda; color: #155724; }
-    .btn-success:hover { background: #c3e6cb; }
-    .btn-warning { background: #fff3cd; color: #856404; }
-    .btn-warning:hover { background: #ffeeba; }
-    .btn-danger { background: #f8d7da; color: #721c24; }
-    .btn-danger:hover { background: #f5c6cb; }
+    .btn-success { background: rgba(34,197,94,0.15); color: #4ade80; }
+    .btn-success:hover { background: rgba(34,197,94,0.25); }
+    .btn-warning { background: rgba(245,158,11,0.15); color: #fbbf24; }
+    .btn-warning:hover { background: rgba(245,158,11,0.25); }
+    .btn-danger { background: rgba(239,68,68,0.15); color: #f87171; }
+    .btn-danger:hover { background: rgba(239,68,68,0.25); }
   `
 })
 export class AdminPage implements OnInit {

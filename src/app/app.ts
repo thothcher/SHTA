@@ -3,6 +3,7 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import { LanguageService } from './services/language.service';
 import { GamificationService } from './services/gamification.service';
+import { ThemeService } from './services/theme.service';
 import { XpToastComponent } from './components/xp-toast';
 
 @Component({
@@ -17,6 +18,7 @@ export class App {
   protected readonly auth = inject(AuthService);
   protected readonly langService = inject(LanguageService);
   protected readonly gam = inject(GamificationService);
+  protected readonly themeService = inject(ThemeService);
   protected readonly mobileMenuOpen = signal(false);
   private readonly doc = inject(DOCUMENT);
 

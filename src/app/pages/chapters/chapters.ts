@@ -94,12 +94,12 @@ import { LanguageService } from '../../services/language.service';
 
     .roadmap-dot.completed {
       border-color: var(--color-secondary);
-      background: #ccfbf1;
+      background: rgba(20,184,166,0.2);
     }
 
     .roadmap-dot.in-progress {
       border-color: var(--color-accent);
-      background: #dbeafe;
+      background: rgba(99,102,241,0.2);
     }
 
     .roadmap-connector {

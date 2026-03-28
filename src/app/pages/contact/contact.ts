@@ -190,14 +190,14 @@ import { LanguageService } from '../../services/language.service';
       gap: 0.5rem;
     }
     .alert-success {
-      background: #ccfbf1;
-      color: #0f766e;
-      border: 1px solid #5eead4;
+      background: rgba(20,184,166,0.12);
+      color: #2dd4bf;
+      border: 1px solid rgba(20,184,166,0.3);
     }
     .alert-error {
-      background: #fef2f2;
-      color: #b91c1c;
-      border: 1px solid #fca5a5;
+      background: rgba(239,68,68,0.12);
+      color: #f87171;
+      border: 1px solid rgba(239,68,68,0.3);
     }
 
     .contact-info {

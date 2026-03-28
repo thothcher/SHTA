@@ -1,11 +1,11 @@
 /* ── Navbar ── */
 .navbar {
   background: var(--color-surface);
-  border-bottom: 2px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -74,6 +74,25 @@
   align-items: center;
   gap: 0.5rem;
   flex-shrink: 0;
+}
+
+.btn-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-border-light);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-theme-toggle:hover {
+  background: var(--color-border);
+  color: var(--color-primary);
 }
 
 .btn-profile {
@@ -273,7 +292,7 @@
 
 /* ── Main Footer ── */
 .footer-main {
-  background: var(--color-primary);
+  background: #080b11;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -583,4 +602,13 @@
   .footer-col ul {
     align-items: center;
   }
+}
+
+/* ── Light-theme overrides ── */
+:host-context([data-theme="light"]) .footer-main {
+  background: #1e293b;
+}
+
+:host-context([data-theme="light"]) .navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }

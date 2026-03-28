@@ -123,11 +123,11 @@ import { LanguageService } from '../../services/language.service';
     .level-card {
       padding: 1.5rem 2rem;
       margin-bottom: 2.5rem;
-      background: linear-gradient(135deg, #1d4ed822 0%, #6d28d922 100%);
+      background: linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(167,139,250,0.12) 100%);
     }
     .level-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
     .level-title { font-size: 1.1rem; font-weight: 700; color: var(--color-primary); }
-    .level-name { font-size: 1rem; font-weight: 600; color: #6d28d9; }
+    .level-name { font-size: 1rem; font-weight: 600; color: #a78bfa; }
     .progress-bar {
       width: 100%;
       height: 12px;
@@ -137,12 +137,12 @@ import { LanguageService } from '../../services/language.service';
     }
     .progress-fill {
       height: 100%;
-      background: linear-gradient(90deg, #1d4ed8, #6d28d9);
+      background: linear-gradient(90deg, #6366f1, #a78bfa);
       border-radius: 6px;
       transition: width 0.5s ease;
     }
     .progress-text { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 0.4rem; display: block; }
-    .max-level { color: #6d28d9; font-weight: 600; margin: 0; }
+    .max-level { color: #a78bfa; font-weight: 600; margin: 0; }
 
     .section-heading {
       font-size: 1.15rem;
@@ -174,8 +174,8 @@ import { LanguageService } from '../../services/language.service';
       transition: all 0.2s;
     }
     .badge-card.earned {
-      border-color: #1d4ed8;
-      box-shadow: 0 0 0 1px #1d4ed833;
+      border-color: #6366f1;
+      box-shadow: 0 0 0 1px rgba(99,102,241,0.2);
     }
     .badge-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
     .badge-icon { font-size: 2rem; margin-bottom: 0.25rem; }
@@ -185,7 +185,7 @@ import { LanguageService } from '../../services/language.service';
     .badge-earned-tag {
       font-size: 0.72rem;
       font-weight: 600;
-      color: #4caf50;
+      color: #4ade80;
       display: flex;
       align-items: center;
       gap: 0.2rem;

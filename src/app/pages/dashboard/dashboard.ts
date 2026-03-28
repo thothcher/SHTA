@@ -249,10 +249,10 @@ import { CHAPTERS } from '../../data/book-data';
     .stat-body { display: flex; flex-direction: column; }
     .stat-number { font-size: 1.4rem; font-weight: 800; color: var(--color-primary); }
     .stat-label { font-size: 0.78rem; color: var(--color-text-muted); font-weight: 500; }
-    .xp-card iconify-icon { color: #667eea; }
-    .level-card iconify-icon { color: #764ba2; }
+    .xp-card iconify-icon { color: #818cf8; }
+    .level-card iconify-icon { color: #a78bfa; }
     .streak-card iconify-icon { color: #ff6b35; }
-    .badge-card iconify-icon { color: #4caf50; }
+    .badge-card iconify-icon { color: #4ade80; }
 
     .level-progress-section { margin-bottom: 2rem; }
     .level-progress-header {
@@ -272,7 +272,7 @@ import { CHAPTERS } from '../../data/book-data';
     }
     .level-fill {
       height: 100%;
-      background: linear-gradient(90deg, #667eea, #764ba2);
+      background: linear-gradient(90deg, #6366f1, #a78bfa);
       border-radius: 5px;
       transition: width 0.6s ease;
     }
@@ -308,7 +308,7 @@ import { CHAPTERS } from '../../data/book-data';
       width: 56px;
       height: 56px;
       border-radius: 12px;
-      background: rgba(102, 126, 234, 0.1);
+      background: rgba(99, 102, 241, 0.15);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -318,7 +318,7 @@ import { CHAPTERS } from '../../data/book-data';
     .continue-chapter { font-size: 0.75rem; color: var(--color-text-muted); font-weight: 600; text-transform: uppercase; }
     .continue-title { display: block; font-size: 1rem; font-weight: 700; color: var(--color-primary); margin-top: 0.15rem; }
     .continue-progress-bar { width: 100%; height: 6px; background: var(--color-border); border-radius: 3px; margin-top: 0.5rem; overflow: hidden; }
-    .continue-fill { height: 100%; background: #667eea; border-radius: 3px; }
+    .continue-fill { height: 100%; background: #6366f1; border-radius: 3px; }
     .continue-arrow { color: var(--color-text-muted); flex-shrink: 0; }
 
     .empty-card {
@@ -359,7 +359,7 @@ import { CHAPTERS } from '../../data/book-data';
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      background: rgba(102, 126, 234, 0.1);
+      background: rgba(99, 102, 241, 0.15);
       padding: 0.5rem 1rem;
       border-radius: var(--radius-md);
       font-size: 0.85rem;
@@ -393,8 +393,8 @@ import { CHAPTERS } from '../../data/book-data';
       transition: all 0.15s;
     }
     .chapter-mini:hover { border-color: var(--color-accent); transform: translateY(-1px); }
-    .chapter-mini.completed { border-color: #4caf50; background: rgba(76, 175, 80, 0.06); }
-    .chapter-mini.in-progress { border-color: #667eea; background: rgba(102, 126, 234, 0.06); }
+    .chapter-mini.completed { border-color: #4ade80; background: rgba(74, 222, 128, 0.1); }
+    .chapter-mini.in-progress { border-color: #6366f1; background: rgba(99, 102, 241, 0.1); }
     .ch-num {
       width: 22px;
       height: 22px;
@@ -407,10 +407,10 @@ import { CHAPTERS } from '../../data/book-data';
       font-weight: 700;
       flex-shrink: 0;
     }
-    .completed .ch-num { background: #4caf50; color: #fff; }
-    .in-progress .ch-num { background: #667eea; color: #fff; }
+    .completed .ch-num { background: #4ade80; color: #0c1017; }
+    .in-progress .ch-num { background: #6366f1; color: #fff; }
     .ch-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
-    .ch-done { color: #4caf50; flex-shrink: 0; }
+    .ch-done { color: #4ade80; flex-shrink: 0; }
 
     @media (max-width: 768px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -430,11 +430,11 @@ import { CHAPTERS } from '../../data/book-data';
     .level-card-full {
       padding: 1.5rem 2rem;
       margin-bottom: 2rem;
-      background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
+      background: linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(167,139,250,0.12) 100%);
     }
     .level-header-full { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
     .level-title-full { font-size: 1.1rem; font-weight: 700; color: var(--color-primary); }
-    .level-name-full { font-size: 1rem; font-weight: 600; color: #764ba2; }
+    .level-name-full { font-size: 1rem; font-weight: 600; color: #a78bfa; }
     .progress-bar-full {
       width: 100%;
       height: 12px;
@@ -444,12 +444,12 @@ import { CHAPTERS } from '../../data/book-data';
     }
     .progress-fill-full {
       height: 100%;
-      background: linear-gradient(90deg, #667eea, #764ba2);
+      background: linear-gradient(90deg, #6366f1, #a78bfa);
       border-radius: 6px;
       transition: width 0.5s ease;
     }
     .progress-text-full { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 0.4rem; display: block; }
-    .max-level { color: #764ba2; font-weight: 600; margin: 0; }
+    .max-level { color: #a78bfa; font-weight: 600; margin: 0; }
 
     .badge-category { margin-bottom: 1.5rem; }
     .category-heading {
@@ -481,8 +481,8 @@ import { CHAPTERS } from '../../data/book-data';
       transition: all 0.2s;
     }
     .badge-card.earned {
-      border-color: #667eea;
-      box-shadow: 0 0 0 1px #667eea33;
+      border-color: #6366f1;
+      box-shadow: 0 0 0 1px rgba(99,102,241,0.2);
     }
     .badge-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
     .badge-icon { font-size: 2rem; margin-bottom: 0.25rem; }
@@ -492,7 +492,7 @@ import { CHAPTERS } from '../../data/book-data';
     .badge-earned-tag {
       font-size: 0.72rem;
       font-weight: 600;
-      color: #4caf50;
+      color: #4ade80;
       display: flex;
       align-items: center;
       gap: 0.2rem;

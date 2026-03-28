@@ -211,7 +211,7 @@ import { LanguageService } from '../../services/language.service';
     }
     .lb-row:hover { background: var(--color-bg); }
     .lb-me {
-      background: rgba(192, 57, 43, 0.06);
+      background: rgba(239, 68, 68, 0.08);
       font-weight: 600;
     }
     .lb-rank {
@@ -267,7 +267,7 @@ import { LanguageService } from '../../services/language.service';
     }
 
     .form-actions { display: flex; gap: 0.75rem; margin-top: 1rem; }
-    .error { color: #e74c3c; font-size: 0.85rem; margin-top: 0.5rem; }
+    .error { color: #f87171; font-size: 0.85rem; margin-top: 0.5rem; }
 
     .progress-stats {
       display: grid;
@@ -304,8 +304,8 @@ import { LanguageService } from '../../services/language.service';
       gap: 0.4rem;
       padding: 0.5rem 1rem;
       border-radius: var(--radius-md);
-      background: #fff8e1;
-      color: #f57f17;
+      background: rgba(245,158,11,0.12);
+      color: #fbbf24;
       font-size: 0.9rem;
       margin-bottom: 1rem;
     }

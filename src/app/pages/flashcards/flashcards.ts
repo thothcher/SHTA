@@ -215,7 +215,7 @@ function getStaticCards(chapterId: number): Flashcard[] {
     }
     .progress-fill {
       height: 100%;
-      background: linear-gradient(90deg, #1d4ed8, #6d28d9);
+      background: linear-gradient(90deg, #6366f1, #a78bfa);
       border-radius: 3px;
       transition: width 0.3s ease;
     }
@@ -231,7 +231,7 @@ function getStaticCards(chapterId: number): Flashcard[] {
       cursor: pointer;
       outline: none;
     }
-    .flashcard:focus-visible { box-shadow: 0 0 0 3px #1d4ed855; border-radius: var(--radius-lg); }
+    .flashcard:focus-visible { box-shadow: 0 0 0 3px rgba(99,102,241,0.33); border-radius: var(--radius-lg); }
     .flashcard-inner {
       position: relative;
       width: 100%;
@@ -255,12 +255,12 @@ function getStaticCards(chapterId: number): Flashcard[] {
       text-align: center;
     }
     .flashcard-front {
-      background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);
+      background: linear-gradient(135deg, #6366f1 0%, #a78bfa 100%);
       color: #fff;
     }
     .flashcard-back {
       background: var(--color-surface);
-      border: 2px solid #1d4ed8;
+      border: 2px solid #6366f1;
       transform: rotateY(180deg);
     }
     .card-category {
@@ -308,12 +308,12 @@ function getStaticCards(chapterId: number): Flashcard[] {
       cursor: pointer;
       transition: all 0.2s;
     }
-    .btn-diff.hard { background: #ffebee; color: #c62828; border-color: #ef9a9a; }
-    .btn-diff.hard:hover { background: #ffcdd2; }
-    .btn-diff.medium { background: #fff8e1; color: #f57f17; border-color: #ffe082; }
-    .btn-diff.medium:hover { background: #ffecb3; }
-    .btn-diff.easy { background: #ccfbf1; color: #0f766e; border-color: #5eead4; }
-    .btn-diff.easy:hover { background: #99f6e4; }
+    .btn-diff.hard { background: rgba(239,68,68,0.15); color: #f87171; border-color: rgba(239,68,68,0.3); }
+    .btn-diff.hard:hover { background: rgba(239,68,68,0.25); }
+    .btn-diff.medium { background: rgba(245,158,11,0.15); color: #fbbf24; border-color: rgba(245,158,11,0.3); }
+    .btn-diff.medium:hover { background: rgba(245,158,11,0.25); }
+    .btn-diff.easy { background: rgba(20,184,166,0.15); color: #2dd4bf; border-color: rgba(20,184,166,0.3); }
+    .btn-diff.easy:hover { background: rgba(20,184,166,0.25); }
 
     .card-nav {
       display: flex;
@@ -351,9 +351,9 @@ function getStaticCards(chapterId: number): Flashcard[] {
       font-weight: 600;
       font-size: 0.85rem;
     }
-    .easy-count { color: #2e7d32; }
-    .medium-count { color: #f57f17; }
-    .hard-count { color: #c62828; }
+    .easy-count { color: #4ade80; }
+    .medium-count { color: #fbbf24; }
+    .hard-count { color: #f87171; }
     .session-actions {
       display: flex;
       justify-content: center;

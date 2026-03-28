@@ -339,7 +339,7 @@ import { LanguageService } from '../../services/language.service';
       background: var(--color-accent-light);
       border-color: var(--color-accent-light);
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(29,78,216,0.4);
+      box-shadow: 0 8px 28px rgba(99,102,241,0.4);
       color: #fff;
     }
     .btn-hero-secondary {
@@ -422,7 +422,7 @@ import { LanguageService } from '../../services/language.service';
     }
     .section-badge {
       display: inline-block;
-      background: rgba(29,78,216,0.08);
+      background: rgba(99,102,241,0.12);
       color: var(--color-accent);
       padding: 0.3rem 0.9rem;
       border-radius: var(--radius-full);
@@ -612,7 +612,7 @@ import { LanguageService } from '../../services/language.service';
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: rgba(29,78,216,0.08);
+      background: rgba(99,102,241,0.12);
       color: var(--color-accent);
       padding: 0.35rem 0.9rem;
       border-radius: var(--radius-full);
@@ -665,7 +665,7 @@ import { LanguageService } from '../../services/language.service';
       font-size: 0.9rem;
       font-weight: 600;
       color: var(--color-accent);
-      background: rgba(29,78,216,0.06);
+      background: rgba(99,102,241,0.1);
       padding: 0.3rem 0.6rem;
       border-radius: var(--radius-sm);
       letter-spacing: 0.04em;
@@ -758,8 +758,8 @@ import { LanguageService } from '../../services/language.service';
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(13,148,136,0.08);
-      color: #0d9488;
+      background: rgba(20,184,166,0.12);
+      color: #2dd4bf;
       padding: 0.75rem 1.5rem;
       border-radius: var(--radius-full);
       font-weight: 600;
@@ -769,7 +769,8 @@ import { LanguageService } from '../../services/language.service';
     /* CTA */
     .cta { padding: 3rem 0 5rem; }
     .cta-card {
-      background: var(--color-primary);
+      background: #111827;
+      border: 1px solid var(--color-border);
       border-radius: var(--radius-xl);
       padding: 3.5rem;
       display: flex;

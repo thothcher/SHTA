@@ -100,8 +100,8 @@ import { LanguageService } from '../../services/language.service';
     }
 
     .auth-error {
-      background: #fce4ec;
-      color: #c62828;
+      background: rgba(239,68,68,0.12);
+      color: #f87171;
       padding: 0.75rem 1rem;
       border-radius: var(--radius-md);
       font-size: 0.85rem;
@@ -109,8 +109,8 @@ import { LanguageService } from '../../services/language.service';
     }
 
     .auth-success {
-      background: #ccfbf1;
-      color: #0f766e;
+      background: rgba(20,184,166,0.12);
+      color: #2dd4bf;
       padding: 0.75rem 1rem;
       border-radius: var(--radius-md);
       font-size: 0.85rem;

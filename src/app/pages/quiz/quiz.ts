@@ -155,8 +155,8 @@ import { LanguageService } from '../../services/language.service';
       background: var(--color-border-light);
     }
     .option-btn.selected { border-color: var(--color-primary); background: var(--color-border-light); }
-    .option-btn.correct { border-color: var(--color-secondary); background: #e8f5e9; }
-    .option-btn.wrong { border-color: #e53935; background: #fce4ec; }
+    .option-btn.correct { border-color: var(--color-secondary); background: rgba(34,197,94,0.15); }
+    .option-btn.wrong { border-color: #f87171; background: rgba(239,68,68,0.15); }
     .option-btn:disabled { cursor: default; }
 
     .option-letter {
@@ -173,7 +173,7 @@ import { LanguageService } from '../../services/language.service';
       flex-shrink: 0;
     }
     .option-btn.correct .option-letter { background: var(--color-secondary); color: #fff; }
-    .option-btn.wrong .option-letter { background: #e53935; color: #fff; }
+    .option-btn.wrong .option-letter { background: #ef4444; color: #fff; }
 
     .option-text { font-size: 0.95rem; color: var(--color-text); }
 
@@ -185,8 +185,8 @@ import { LanguageService } from '../../services/language.service';
       font-size: 0.9rem;
       line-height: 1.6;
     }
-    .explanation.correct { background: #e8f5e9; }
-    .explanation.wrong { background: #fce4ec; }
+    .explanation.correct { background: rgba(34,197,94,0.12); }
+    .explanation.wrong { background: rgba(239,68,68,0.12); }
     .explanation strong { display: block; margin-bottom: 0.25rem; }
     .explanation p { color: var(--color-text-light); }
 
@@ -220,7 +220,7 @@ import { LanguageService } from '../../services/language.service';
     .results-bar-fill.low { background: var(--color-accent); }
 
     .results-actions { display: flex; gap: 1rem; justify-content: center; }
-    .submit-error { color: #e53935; font-size: 0.85rem; margin-top: 1rem; }
+    .submit-error { color: #f87171; font-size: 0.85rem; margin-top: 1rem; }
   `
 })
 export class QuizPage implements OnInit {

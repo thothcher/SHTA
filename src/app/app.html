@@ -53,6 +53,17 @@
 
       <!-- Mobile-only auth buttons -->
       <div class="mobile-auth">
+        <button
+          class="btn-theme-toggle"
+          (click)="themeService.toggle()"
+          [attr.aria-label]="themeService.theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+          type="button">
+          @if (themeService.theme() === 'dark') {
+            <iconify-icon icon="mdi:weather-sunny" width="18" height="18"></iconify-icon>
+          } @else {
+            <iconify-icon icon="mdi:weather-night" width="18" height="18"></iconify-icon>
+          }
+        </button>
         @if (auth.isLoggedIn()) {
           <a routerLink="/profile" class="btn-profile" (click)="closeMenu()">
             <span class="profile-icon"><iconify-icon icon="mdi:account-circle-outline" width="18" height="18"></iconify-icon></span>
@@ -70,6 +81,17 @@
 
     <!-- Auth buttons (desktop) -->
     <div class="nav-auth">
+      <button
+        class="btn-theme-toggle"
+        (click)="themeService.toggle()"
+        [attr.aria-label]="themeService.theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+        type="button">
+        @if (themeService.theme() === 'dark') {
+          <iconify-icon icon="mdi:weather-sunny" width="18" height="18"></iconify-icon>
+        } @else {
+          <iconify-icon icon="mdi:weather-night" width="18" height="18"></iconify-icon>
+        }
+      </button>
       @if (auth.isLoggedIn()) {
         <a routerLink="/profile" class="btn-profile" (click)="closeMenu()">
           @if (auth.currentUser()?.avatar) {

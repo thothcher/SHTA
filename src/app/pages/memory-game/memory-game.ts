@@ -209,13 +209,13 @@ interface GameCard {
       padding: 0.75rem;
     }
 
-    .game-card.term .card-back { border-color: var(--color-accent); background: #fff5f2; }
-    .game-card.definition .card-back { border-color: var(--color-secondary); background: #f0faf5; }
+    .game-card.term .card-back { border-color: var(--color-accent); background: rgba(99,102,241,0.08); }
+    .game-card.definition .card-back { border-color: var(--color-secondary); background: rgba(20,184,166,0.08); }
 
     .game-card.matched .card-back {
       opacity: 0.6;
       border-color: var(--color-secondary);
-      background: #e8f5e9;
+      background: rgba(34,197,94,0.12);
     }
 
     /* Win overlay */

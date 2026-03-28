@@ -236,7 +236,7 @@ import { Chapter, Quiz } from '../../data/book-data';
       font-size: 0.82rem;
       font-weight: 800;
       margin-top: 0.1rem;
-      box-shadow: 0 2px 6px rgba(29,78,216,0.3);
+      box-shadow: 0 2px 6px rgba(99,102,241,0.3);
     }
 
     .point-text {
@@ -247,7 +247,7 @@ import { Chapter, Quiz } from '../../data/book-data';
 
     /* Fun Fact */
     .fun-fact-card {
-      background: linear-gradient(135deg, rgba(29,78,216,0.07), rgba(29,78,216,0.02));
+      background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(99,102,241,0.02));
       border-left: 5px solid var(--color-accent);
     }
 
@@ -264,7 +264,7 @@ import { Chapter, Quiz } from '../../data/book-data';
       padding: 0.35rem 0.85rem;
       border-radius: 999px;
       margin-bottom: 0.75rem;
-      box-shadow: 0 2px 8px rgba(29,78,216,0.25);
+      box-shadow: 0 2px 8px rgba(99,102,241,0.25);
     }
 
     .fun-fact-card p {
@@ -331,7 +331,7 @@ import { Chapter, Quiz } from '../../data/book-data';
     }
 
     .quiz-cta:hover {
-      background: rgba(29, 78, 216, 0.06);
+      background: rgba(99, 102, 241, 0.06);
       box-shadow: var(--shadow-md);
     }
 

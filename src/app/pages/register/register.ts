@@ -99,8 +99,8 @@ import { LanguageService } from '../../services/language.service';
     form { display: flex; flex-direction: column; gap: 1rem; }
 
     .auth-error {
-      background: #fce4ec;
-      color: #c62828;
+      background: rgba(239,68,68,0.12);
+      color: #f87171;
       padding: 0.75rem 1rem;
       border-radius: var(--radius-md);
       font-size: 0.85rem;
@@ -129,10 +129,10 @@ import { LanguageService } from '../../services/language.service';
       gap: 0.5rem;
       margin-top: 1.25rem;
       padding: 0.75rem;
-      background: #e8f5e9;
+      background: rgba(34,197,94,0.12);
       border-radius: var(--radius-md);
       font-size: 0.85rem;
-      color: #2e7d32;
+      color: #4ade80;
       font-weight: 500;
     }
 

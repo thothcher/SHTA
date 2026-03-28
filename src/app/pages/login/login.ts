@@ -108,8 +108,8 @@ import { LanguageService } from '../../services/language.service';
     }
 
     .auth-error {
-      background: #fce4ec;
-      color: #c62828;
+      background: rgba(239,68,68,0.12);
+      color: #f87171;
       padding: 0.75rem 1rem;
       border-radius: var(--radius-md);
       font-size: 0.85rem;

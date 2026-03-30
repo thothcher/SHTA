@@ -5,6 +5,7 @@ import { AuthService } from './services/auth.service';
 import { LanguageService } from './services/language.service';
 import { GamificationService } from './services/gamification.service';
 import { ThemeService } from './services/theme.service';
+import { SeoService } from './services/seo.service';
 import { XpToastComponent } from './components/xp-toast';
 
 @Component({
@@ -20,6 +21,7 @@ export class App {
   protected readonly langService = inject(LanguageService);
   protected readonly gam = inject(GamificationService);
   protected readonly themeService = inject(ThemeService);
+  protected readonly seo = inject(SeoService);
   protected readonly mobileMenuOpen = signal(false);
   private readonly doc = inject(DOCUMENT);
   private readonly destroyRef = inject(DestroyRef);
